@@ -1,0 +1,12 @@
+<%= link_to('Add a blog', new_blog_path, class: 'add-blog-link') %>
+
+
+  <% @blogs.each do |blog| %>
+    <div class="blog-details">
+      <h3><%= blog.name %></h3>  
+      <h5><%= blog.author %></h5>
+      <p><%= blog.description %></p>
+      <%= link_to('Read me...',blog_path(blog.id)) %>
+    </div> 
+  <% end %>  
+
